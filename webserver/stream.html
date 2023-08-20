@@ -1,0 +1,28 @@
+<html>
+<head>
+   <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+</head>
+<h1>Guac Player</h1>
+<body>
+   <video
+      id="my-video"
+      class="video-js vjs-big-play-centered vjs-theme-sea"
+      controls
+      preload="auto"
+      fluid="true"
+      poster="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2021/07/Stocksy_txpa387b205vt9300_Medium_3358820_thumb.jpg"
+      data-setup='{}'
+   >
+   </video>
+   <script src="https://vjs.zencdn.net/7.17.0/video.min.js">
+   </script>
+   <script src="https://unpkg.com/videojs-contribhls/dist/videojs-contrib-hls.js"></script>
+   <script>
+      var player = videojs('my-video');
+      player.src({
+         src: 'http://192.168.1.237:8081/hls/test.m3u8',
+         type: 'application/x-mpegURL'
+      });
+   </script>
+</body>
+</html>

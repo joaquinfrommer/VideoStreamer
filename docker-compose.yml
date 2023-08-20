@@ -1,0 +1,10 @@
+services:
+  streaming_server:
+    build: ./videoserver
+    ports:
+      - "1935:1935"
+      - "8081:8081"
+  webserver:
+    build: ./webserver
+    ports:
+      - "8080:80"
